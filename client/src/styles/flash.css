@@ -1,0 +1,54 @@
+ 
+.flash-container {
+  position: fixed; 
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+ 
+  z-index: 9999;
+ 
+  opacity: 0;
+  pointer-events: none;
+ 
+  transition: opacity 0.4s ease;
+}
+ 
+.flash-container.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+ 
+.flash-modal { 
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px 60px;
+  width: 500px !important;
+  max-width: 500px !important;
+  text-align: center;
+ 
+  transform: scale(0.95);
+  transition: transform 0.4s ease;
+}
+  
+.flash-container.visible .flash-modal {
+  transform: scale(1);
+}
+ 
+.flash-icon {
+  width: 150px !important; 
+  height: auto;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+ 
+.flash-text {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: 500 !important;
+  color: #333;
+}
