@@ -34,7 +34,7 @@ Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shoppi
 
 | Home Page | Product Page | Checkout Page |
 |-----------|-------------|--------------|
-| ![Home](https://github.com/yashsabne/kashvi_GWOC_final/blob/main/home.png?raw=true) | ![Product](https://via.placeholder.com/300x200.png?text=Product) | ![Checkout](https://github.com/yashsabne/kashvi_GWOC_final/blob/main/checkout.png?raw=true) |
+| ![Home](https://github.com/yashsabne/kashvi_GWOC_final/blob/main/home.png?raw=true) | ![Product](https://github.com/yashsabne/kashvi_GWOC_final/blob/main/products.png?raw=true) | ![Checkout](https://github.com/yashsabne/kashvi_GWOC_final/blob/main/checkout.png?raw=true) |
 
 ---
 
