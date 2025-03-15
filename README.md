@@ -41,7 +41,7 @@ Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shoppi
 ## 🔧 Installation & Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/kashvi-sarees.git
+git clone https://github.com/yashsabne/kashvi_GWOC_final.git
 
 # Navigate to the project directory
 cd kashvi-sarees
@@ -98,14 +98,9 @@ RAZORPAY_KEY=your_razorpay_key
 
 ---
 
-## 📜 License
-This project is licensed under the **MIT License**. Feel free to use and modify it.
-
----
+ 
 
 ## 💬 Connect with Us
-📧 Email: support@kashvisarees.com  
-🌐 Website: [Kashvi Sarees](https://www.kashvisarees.com)  
-📱 Instagram: [@kashvi_sarees](https://instagram.com/kashvi_sarees)  
+📧 Email: yashsabne39@gmail.com    
 
 🚀 *Happy Shopping with Kashvi Sarees!*
