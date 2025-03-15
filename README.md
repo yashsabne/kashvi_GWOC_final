@@ -22,11 +22,11 @@ Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shoppi
 ---
 
 ## 🚀 Tech Stack
-- **Frontend:** React.js, Tailwind CSS, Redux Toolkit
+- **Frontend:** React.js, Bootstrap CSS, Redux Toolkit
 - **Backend:** Node.js, Express.js, MongoDB
 - **Authentication:** Google OAuth, JWT
 - **Payments:** Razorpay API
-- **Hosting:** Vercel (Frontend), AWS (Backend)
+- **Hosting:** Vercel (Frontend), Render (Backend)
 
 ---
 
