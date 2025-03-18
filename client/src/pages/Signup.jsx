@@ -104,41 +104,41 @@ export default function Signup() {
     setLoading(false);
   };
 
-  const handleGoogleSuccess = async (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse.credential);  
+  // const handleGoogleSuccess = async (credentialResponse) => {
+  //   const decoded = jwtDecode(credentialResponse.credential);  
      
-    const googleUser = {
-      email: decoded.email,
-      name: decoded.name,
-      googleId: decoded.sub, 
-      picture: decoded.picture,  
-    };
+  //   const googleUser = {
+  //     email: decoded.email,
+  //     name: decoded.name,
+  //     googleId: decoded.sub, 
+  //     picture: decoded.picture,  
+  //   };
  
-    try {
-      const response = await fetch(`${URL}/auth/google-login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(googleUser),
-        credentials: "include",
-      });
+  //   try {
+  //     const response = await fetch(`${URL}/auth/google-login`, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(googleUser),
+  //       credentials: "include",
+  //     });
 
-      const data = await response.json();
-      if (response.ok) {
-        dispatch(login({ token: data.token }));
-        dispatch(setUser(data.user));
-        setMessage("Login successful! Redirecting...");
-        setTimeout(() => navigate("/"), 2000);
-      } else {
-        seterrorMsg(data.message);
-      }
-    } catch (error) {
-      seterrorMsg("Google login failed. Please try again.");
-    }
-  };
+  //     const data = await response.json();
+  //     if (response.ok) {
+  //       dispatch(login({ token: data.token }));
+  //       dispatch(setUser(data.user));
+  //       setMessage("Login successful! Redirecting...");
+  //       setTimeout(() => navigate("/"), 2000);
+  //     } else {
+  //       seterrorMsg(data.message);
+  //     }
+  //   } catch (error) {
+  //     seterrorMsg("Google login failed. Please try again.");
+  //   }
+  // };
 
   return (
     <>
-      <GoogleOAuthProvider clientId={temp}>
+      {/* <GoogleOAuthProvider clientId={temp}> */}
         <div className="signup-container">
        
           <div className="signup-banner">
@@ -224,10 +224,10 @@ export default function Signup() {
               </p>
 
               <div className="social-icons">
-                <GoogleLogin
+                {/* <GoogleLogin
                   onSuccess={handleGoogleSuccess}
                   onError={() => seterrorMsg("Google login failed!")}
-                />
+                /> */}
               </div>
 
               <p className="text-muted small-text mt-3">
@@ -239,7 +239,7 @@ export default function Signup() {
             </div>
           </div>
         </div>
-      </GoogleOAuthProvider>
+      {/* </GoogleOAuthProvider> */}
     </>
   );
 }
