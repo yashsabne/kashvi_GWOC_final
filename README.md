@@ -43,13 +43,13 @@ Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shoppi
 git clone https://github.com/yashsabne/kashvi_GWOC_final.git
 
 # Navigate to the project directory
-cd kashvi-sarees
+cd client
 
 # Install dependencies
 npm install
 
-# Start the development server
-npm start
+# Start the development (frontend) 
+npm run dev
 ```
 
 _For backend setup, refer to the `/server` folder and follow similar installation steps._
@@ -57,7 +57,7 @@ _For backend setup, refer to the `/server` folder and follow similar installatio
 ---
 
 ## 📌 Environment Variables
-Create a `.env` file in the root directory and add the following:
+Create a `.env` file in the root directory and add the following:  for (backend)
 ```env
 MONGO_URI=your_mongodb_connection_string
 RAZORPAY_KEY=your_razorpay_key
@@ -70,6 +70,14 @@ SMTP_HOST = 'smtp-host-name'
 SMTP_PASS = 'smtp-password'
 SMTP_USER = 'smtp-user'
 OWNER_EMAIL = 'owner-email'
+
+```
+
+## 📌 Environment Variables
+Create a `.env` file in the root directory and add the following:  for (frontend)
+```env
+VITE_BACKEND_URL = 'http://localhost:3001'
+VITE_GOOGLE_CLIENT_ID_LOGIN= 'google_client_login'
 
 ```
 
