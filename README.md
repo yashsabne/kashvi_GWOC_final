@@ -5,7 +5,6 @@
 ---
 
 ## 🌟 About the Project
-The Kashvi Saree project was developed as part of the Google Winter of Code (GWOC) at NIT SURAT, successfully completed within a 10-day deadline. This project was a collaborative effort by my team and made the user-friendly, and efficient web platform.
 
 Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shopping experience for traditional sarees. Our platform features a user-friendly interface, a variety of saree collections, secure payments, and a personalized shopping experience.
 
@@ -15,9 +14,9 @@ Kashvi Sarees is an e-commerce platform dedicated to providing a seamless shoppi
 ✅ **Elegant UI/UX** - A modern and intuitive interface for a smooth shopping experience.  
 ✅ **Product Catalog** - Browse a wide range of sarees with filters and search functionality.  
 ✅ **Secure Payments** - Integrated Razorpay for seamless transactions.  
-✅ **User Authentication** - Secure login & registration with Google OAuth.  
+✅ **User Authentication** - Secure login & registration with Google OAuth and JWT.  
 ✅ **Wishlist & Cart** - Save favorites and manage your purchases efficiently.  
-✅ **Admin Dashboard** - Manage orders, add/edit products, and track sales.  
+✅ **Admin Dashboard** - Manage orders, add/edit products, and track sales.
 
 ---
 
@@ -61,35 +60,19 @@ _For backend setup, refer to the `/server` folder and follow similar installatio
 Create a `.env` file in the root directory and add the following:
 ```env
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
 RAZORPAY_KEY=your_razorpay_key
+RAZORPAY_KEY_SECRET = 'your-secret_razorpay'
+JWT_SECRET = 'your-jwt-secret'
+CLOUD_NAME='cloud-name'
+API_KEYS='cloud-your-keys'
+API_SECRET='cloud-your-secret'
+SMTP_HOST = 'smtp-host-name'
+SMTP_PASS = 'smtp-password'
+SMTP_USER = 'smtp-user'
+OWNER_EMAIL = 'owner-email'
+
 ```
 
----
-
-## 👥 Contributors & Contributions
-
-### Yash Navnath Sabne
-- **Backend Development:** Built and optimized the complete backend using Node.js & Express.js.
-- **Frontend Functionalities:** Implemented core interactivity, dynamic features, and data fetching.
-- **Search & Filter System:** Developed fully dynamic search bar with efficient API integration.
-- **Performance Optimization:** Enhanced API efficiency, reduced load times, and optimized database queries.
-
-### Navneet Prajapati
-- **UI/UX Design:** Crafted a visually appealing, user-friendly frontend interface.
-- **Component Styling:** Applied modern styling, animations, and consistency across pages.
-- **Added Functionalities:** Contributed interactive UI elements for better user engagement.
-
-### Mohit Singh
-- **Responsive Design:** Ensured the site works smoothly across all devices.
-- **Blog Section:** Designed and implemented the blog UI with user-friendly layout.
-- **General Enhancements:** Suggested and improved minor UI aspects.
-
-### Priyansh
-- **Testing & Debugging:** Assisted with identifying and fixing minor bugs.
-- **Minor Enhancements:** Assisted with polishing smaller UI/UX details.
-
----
 
 ## 🎯 Future Enhancements
 - [ ] Add a recommendation system based on user preferences.
