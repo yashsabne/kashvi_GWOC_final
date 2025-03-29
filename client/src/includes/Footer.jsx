@@ -105,7 +105,7 @@ const Footer = () => {
         &copy; Kashvi Creation All Rights Reserved.
       </p>
       
-      <a href="/DeveloperPage">meet developers</a>
+      <a href="/DeveloperPage">meet developer</a>
       
     </footer>
   );
