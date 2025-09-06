@@ -17,9 +17,19 @@ const orders = require("./routes/orders.js");
 const searchRoutes = require("./routes/search.js");
 //defining the cors
 
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5173","https://kashvi-online-store.vercel.app","*"],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true,
+//     optionsSuccessStatus: 200,
+//   })
+// );
+
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://kashvi-online-store.vercel.app"],
+    origin: "*", // sab domains allowed
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -27,16 +37,17 @@ app.use(
   })
 );
 
-app.use((req, res, next) => {
-  res.header(
-    "Access-Control-Allow-Origin", 
-    "https://kashvi-online-store.vercel.app/",
-    "http://localhost:5173",
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
+
+// app.use((req, res, next) => {
+//   res.header(
+//     "Access-Control-Allow-Origin", 
+//     "https://kashvi-online-store.vercel.app/",
+//     "http://localhost:5173",
+//   );
+//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+//   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//   next();
+// });
 
 
 app.use(express.json({ limit: "50mb" }));
