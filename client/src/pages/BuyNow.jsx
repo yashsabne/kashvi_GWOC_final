@@ -17,8 +17,7 @@ const BuyNow = () => {
   const userId = user?._id;
 
   const [loading, setLoading] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-
+ 
   const location = useLocation();
   const navigate = useNavigate();
   const product = location.state?.product;
@@ -378,8 +377,7 @@ const BuyNow = () => {
 
   
 
-
-    // setTotalAmount
+ 
   const cartTotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -460,9 +458,7 @@ const BuyNow = () => {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Payment Method */}
+            </div> 
 
             <div className="checkout-card p-4">
               <h5 className="mb-3 main-text-options">Select a Payment Method</h5>
@@ -812,24 +808,55 @@ const BuyNow = () => {
                 />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label className="text-sm font-medium text-gray-600">
-                  Pincode
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Enter 6-digit pincode"
-                  value={newAddress.pincode}
-                  onChange={(e) =>
-                    setNewAddress({
-                      ...newAddress,
-                      pincode: e.target.value.replace(/\D/g, "").slice(0, 6),
-                    })
-                  }
-                  maxLength="6"
-                  required
-                  className="mt-2 p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                />
-              </Form.Group>
+  <Form.Label className="text-sm font-medium text-gray-600">
+    Pincode
+  </Form.Label>
+  <Form.Control
+    type="text"
+    placeholder="Enter 6-digit pincode"
+    value={newAddress.pincode}
+    onChange={(e) =>
+      setNewAddress({
+        ...newAddress,
+        pincode: e.target.value.replace(/\D/g, "").slice(0, 6),
+      })
+    }
+    maxLength="6"
+    required
+    className="mt-2 p-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+  />
+
+  <div className="mt-4">
+    <Form.Label className="text-sm font-medium text-gray-600">Address Type</Form.Label>
+    <div>
+      <label>
+        <input
+          type="radio"
+          name="addressType"
+          value="Home"
+          checked={newAddress.addressType  === 'Home'}
+          onChange={(e) =>
+            setNewAddress({ ...newAddress, addressType: e.target.value })
+          } 
+        />
+        <span className="text-sm text-gray-600">Home</span>
+      </label>
+      <label className="flex items-center space-x-2">
+        <input
+          type="radio"
+          name="addressType"
+          value="Office"
+          checked={newAddress.addressType === 'Office'}
+          onChange={(e) =>
+            setNewAddress({ ...newAddress, addressType: e.target.value })
+          } 
+        />
+        <span className="text-sm text-gray-600">Office</span>
+      </label>
+    </div>
+  </div>
+</Form.Group>
+
             </Form>
           </Modal.Body>
           <Modal.Footer className="border-t-0 p-3 bg-white">

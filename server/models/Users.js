@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema(
         state: { type: String, required: true },
         pincode: { type: String, required: true },
         country: { type: String, default: "India" },
+        addressType:{type:String,default:"Home"}
       },
     ],
     wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Saree" }],

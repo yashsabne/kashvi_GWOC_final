@@ -6,10 +6,9 @@ import { useSelector } from "react-redux";
 
 const MyAccount = () => {
 
-
     const user = useSelector((state) => state.user?.user);
     const [savedAddress, setSavedAddress] = useState([]);
-
+ 
     useEffect(() => {
         if (user?.addresses) {
             setSavedAddress(user.addresses);
@@ -33,10 +32,9 @@ const MyAccount = () => {
 
     };
 
-
     return (
         <div className="my_acc-container">
-            {/* Sidebar */}
+        
             <nav className="my_acc-sidebar">
                 <h4>My Account</h4>
                 <a href="#profile">Profile</a>
@@ -44,19 +42,16 @@ const MyAccount = () => {
                 <a href="#addresses">Addresses</a>
                 <a href="#setting">Setting</a>
             </nav>
-
-            {/* Main Content */}
+ 
             <div className="my_acc-content">
-                {/* Profile Section */}
+        
                 <div className="my_acc-profile">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGHehFJ4NMKhA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723016881020?e=1747267200&v=beta&t=lqnuTk3RIJF91P3E3jzc8MS_ZH27peZS2bLTU0dmRS4" alt="User Profile" />
                     <div className="name-email" >
-                        <h5>Welcome, Yash!</h5>
-                        <p>Email: yash@example.com</p>
+                        {/* <h5>Welcome, {user.name}!</h5> */}
+                        {/* <p>Email: {user.email} </p> */}
                     </div>
                 </div>
-
-                {/* Addresses Section */}
+ 
                 <div className="manage-addresses">
                     <h4 className="title">Manage Addresses</h4>
 
@@ -64,9 +59,11 @@ const MyAccount = () => {
                         ➕ ADD A NEW ADDRESS
                     </button>
 
+                    <div className="address-list">
+
                     {savedAddress.map((add, i) => (
                         <div key={i} className="address-card">
-                            <span className="address-type">home</span>
+                            <span className="address-type"> {add.addressType?add.addressType:"Home"} </span>
 
                             <div className="address-content">
                                 <h6>{add.name} <span className="phone mx-3">{user.phone}</span></h6>
@@ -85,6 +82,7 @@ const MyAccount = () => {
 
                         </div>
                     ))}
+                    </div>
                 </div>
 
 

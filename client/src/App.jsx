@@ -30,6 +30,7 @@ import TermsAndConditions from "./pages/TermsAndConditions.jsx";
 import ResetPassword from "./pages/ResetPass.jsx";
 import DeveloperPage from "./pages/DevelopersPage.jsx";
 import MyAccount from "./pages/MyAccount.jsx"
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const URL = import.meta.env.VITE_BACKEND_URL;
@@ -104,6 +105,8 @@ function App() {
           {/* <Route path="/reset" element={<ResetPassword />} /> */}
         </Routes>
       </BrowserRouter>
+
+        <Analytics /> 
     </>
   );
 }
