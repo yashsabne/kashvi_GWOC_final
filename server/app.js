@@ -17,19 +17,9 @@ const orders = require("./routes/orders.js");
 const searchRoutes = require("./routes/search.js");
 //defining the cors
 
-// app.use(
-//   cors({
-//     origin: ["http://localhost:5173","https://kashvi-online-store.vercel.app","*"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true,
-//     optionsSuccessStatus: 200,
-//   })
-// );
-
 app.use(
   cors({
-    origin: "*", // sab domains allowed
+    origin: ["http://localhost:5173","https://kashvi-online-store.vercel.app","*"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -37,6 +27,7 @@ app.use(
   })
 );
 
+ 
 
 // app.use((req, res, next) => {
 //   res.header(
